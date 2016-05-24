@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="styles/style.css">
+
+	<!-- GOOGLE FONTS -->
+	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'>
+
+	<title>Wine &#38; Cheese Board</title>
+
+	<!-- TEMPLATES -->
+	<script id="myWineTemplate" type="x-handlebars-template">
+		<figure class="wine-photo">
+			{{#if photo}}
+				<img src="{{photo}}">
+			{{/if}}
+		</figure>
+		<article class="wine-info">
+		<h2>{{name}} / {{description}} (${{price}})</h2>
+		<p>{{tasting_note}}</p>
+			<ul>
+				<li>{{description}}</li>
+				<li>Alcohol/Vol: {{alcohol}}</li>
+				<li>Made in: {{region}}</li>
+				<li>By: {{produce}}</li>
+				<li>Sugar Content: {{sugar}}</li>
+				<li>Sweetness Descriptor: {{sweetness}}</li>
+				<li>Style: {{style}}</li>
+				<li>Varietal: {{varietal}}e</li>
+			</ul>
+		</article>
+	</script>
+
+	<script id="myCheeseTemplate" type="x-handlebars-template">
+	<article class="cheese-container">
+		<figure class="cheese-image">
+			{{#if photo}}
+				<img src="{{photo}}">
+			{{/if}}
+		</figure>
+		<div class="cheese-info">
+			<h3>{{name}}</h3>
+			<p>{{description}}</p> 
+		</div>
+	</article>
+	</script>		
+	
+
+	<!-- END TEMPLATES -->
+
+</head>
+<body>
+
+<header>
+	<div class="wrapper">
+		<h1>Welcome to my Wine <span class="italic">&#38;</span> Cheese App</h1>
+		<p>Trying to keep your dinner parties <em>classy</em>? This is the app for you!</p>
+		<p>Discover the best wine-cheese pairings based on your favourite wine! All you need to do is follow the steps. It's as easy as 1-2-cheese! (#lameassjoke)</p>
+	</div>
+</header>
+
+<div class="wrapper">
+
+	<form>
+		<fieldset id="wine-selection">
+			<legend>Do you prefer White or Red Wine?</legend>
+			<label for="white-wine">White wine, please!</label>
+			<input type="radio" id="white-wine" name="wine-choices" value="white wine">
+			<label for="red-wine">Red wine, obviously!</label>
+			<input type="radio" id="red-wine" name="wine-choices" value="red wine">
+			
+		</fieldset>
+
+		<fieldset id="flavor-selection" class="flavor-white">
+			<legend>What kind of flavor profile do you like?</legend>
+			<label for="light-crisp">Light &#38; Crisp</label>
+			<input type="radio" id="light-crisp" name="flavor-choices" value="Light & Crisp">
+
+			<label for="off-dry">Off-Dry &#38; Fruity</label>
+			<input type="radio" id="off-dry" name="flavor-choices" value="Off-Dry & Fruity">
+
+			<label for="aromatic">Aromatic &#38; Flavourful</label>
+			<input type="radio" id="aromatic" name="flavor-choices" value="Aromatic & Flavourful">
+
+			<label for="full-rich">Full-Bodied &#38; Rich</label>
+			<input type="radio" id="full-rich" name="flavor-choices" value="Full-Bodied & Rich">
+		</fieldset>
+		<fieldset id="flavor-selection" class="flavor-red">
+			<legend>What kind of flavor profile do you like?</legend>
+			<label for="light-fruity">Light-Bodied &#38; Fruity</label>
+			<input type="radio" id="light-fruity" name="flavor-choices" value="Light-Bodied & Fruity">
+
+			<label for="medium-fruity">Medium-Bodied &#38; Fruity</label>
+			<input type="radio" id="medium-fruity" name="flavor-choices" value="Medium-Bodied & Fruity">
+
+			<label for="full-smooth">Full-Bodied &#38; Smooth</label>
+			<input type="radio" id="full-smooth" name="flavor-choices" value="Full-Bodied & Smooth">
+
+			<label for="full-firm">Full-Bodied &#38; Firm</label>
+			<input type="radio" id="full-firm" name="flavor-choices" value="Full-Bodied & Firm">
+
+		</fieldset>
+		
+		<fieldset id="price-selection">
+			<legend>What is your budget? ($10 – $100)</legend>
+		
+			<input type="range" id="price-range" name="price-range" min="10" max="100" step="5" value="5" onchange="document.querySelector('.rangeValue').innerHTML = this.value">
+
+			<p>$<span class="rangeValue">10</span></p>
+		</fieldset>
+		<div class="submit-container">
+			<input type="submit" value="Show me my booze!">
+		</div>
+		
+	</form>
+	<div class="wine">
+	
+	</div>
+
+	<div class="cheeses">
+		<div class="cheese-type hard">
+			<h2>Hard Cheeses</h2>
+			<ul></ul>
+		</div>
+		<div class="cheese-type soft">
+			<h2>Soft Cheeses</h2>
+			<ul></ul>
+		</div>
+		<div class="cheese-type blue">
+			<h2>Blue Cheeses</h2>
+			<ul></ul>
+		</div>
+		<div class="cheese-type goat">
+			<h2>Goat Cheeses</h2>
+			<ul></ul>
+		</div>
+		<div class="cheese-type washed-rind">
+			<h2>Washed-Rind Cheeses</h2>
+			<ul></ul>
+		</div>
+	</div>
+</div> <!-- end wrapper -->
+
+	<!-- JQUERY -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<!-- HANDLEBARS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+	<!-- UNDERSCOREJS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<!-- OUR JAVASCRIPT -->
+	<script src="js/main-new.js"></script>
+
+</body>
+</html>

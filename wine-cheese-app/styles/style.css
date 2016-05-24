@@ -1,0 +1,416 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: \201C \201D \2018 \2019;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button, html input[type=button],
+input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], input[disabled] {
+  cursor: default;
+}
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body, figure {
+  margin: 0;
+}
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  font-size: 4rem;
+  line-height: 5.2rem;
+  letter-spacing: 0.5rem;
+}
+
+h2 {
+  font-family: 'Fauna One', serif;
+  font-size: 3rem;
+  line-height: 3.9rem;
+}
+
+h3 {
+  font-family: 'Fauna One', serif;
+  font-size: 2rem;
+  line-height: 2.6rem;
+  font-weight: 700;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: goldenrod;
+  font-family: 'Fauna One', serif;
+  font-size: 1.4rem;
+  line-height: 2.24rem;
+  color: #333;
+}
+
+body a {
+  outline: none;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+body a:hover {
+  color: #00a2ba;
+}
+
+header {
+  width: 100%;
+  height: 80vh;
+  background: linear-gradient(rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.8)), url("../images/stock-photo-fancy-meat-and-cheeseboard-with-fruit-84563321.jpg");
+  background-size: cover;
+  background-position: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column wrap;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .wrapper {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: white;
+}
+
+header .wrapper p {
+  font-size: 2rem;
+  line-height: 2.6rem;
+}
+
+header .wrapper .italic {
+  font-style: italic;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 100px auto;
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 50px;
+  border-color: white;
+  padding: 25px 0;
+}
+
+input {
+  margin: 0 50px 25px 0;
+}
+
+input[type=range] {
+  width: 100%;
+}
+
+legend {
+  font-family: 'Fauna One', serif;
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.flavor-white {
+  display: none;
+}
+
+.flavor-red {
+  display: none;
+}
+
+.wine {
+  margin: 25px auto;
+  border-radius: 10px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.wine .wine-photo {
+  width: 40%;
+  margin-right: 15px;
+}
+
+.wine .wine-photo img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.wine .wine-info {
+  width: calc(60% - 15px);
+  padding: 0 25px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column wrap;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.cheeses {
+  display: none;
+  -webkit-flex-flow: column wrap;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.cheeses .cheese-type {
+  background: #333;
+  border-radius: 10px;
+  width: 100%;
+  padding: 50px;
+  margin-bottom: 25px;
+  color: white;
+}
+
+.cheeses .cheese-type ul {
+  margin: 0;
+  padding: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+article.cheese-container {
+  width: calc(100% / 3 - 5px);
+  margin: 15px 0;
+  padding: 25px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column wrap;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+article.cheese-container .cheese-image {
+  width: 60%;
+  margin-bottom: 15px;
+}
+
+article.cheese-container .cheese-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+article.cheese-container .cheese-info {
+  width: 100%;
+}
+
+fieldset#price-selection {
+  display: none;
+}
+
+.submit-container input[type=submit] {
+  outline: none;
+  border: none;
+  padding: 25px;
+  font-size: 2rem;
+  background: #333;
+  color: white;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.submit-container input[type=submit]:hover {
+  background: papayawhip;
+  color: #333;
+}
+
+/*# sourceMappingURL=style.css.map */

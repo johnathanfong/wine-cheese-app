@@ -1,0 +1,211 @@
+@import "_setup.scss";
+
+$mainColor:#333;
+$accentColor:rgb(0,162,186);
+$lightGrey:#ccc;
+
+
+h1 {
+	font-family: 'Playfair Display', serif;
+	text-transform: uppercase;
+	font-size: 4rem;
+	line-height: 5.2rem;
+	letter-spacing: 0.5rem;
+}
+
+h2 {
+	font-family: 'Fauna One', serif;
+	font-size: 3rem;
+	line-height: 3.9rem;
+}
+
+h3 {
+	font-family: 'Fauna One', serif;
+	font-size: 2rem;
+	line-height: 2.6rem;
+	font-weight: 700;
+}
+
+// GENERAL STYLING
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background:goldenrod;
+	font-family: 'Fauna One', serif;
+	font-size: 1.4rem;
+	line-height: 2.24rem;
+	color:$mainColor;
+
+	a {
+		outline: none;
+		text-decoration: none;
+		color:white;
+		transition:color 0.3s;
+		&:hover{
+			color:$accentColor;
+		}
+	}
+}
+header {
+	width:100%;
+	height:80vh;
+	background:linear-gradient(rgba(51,51,51,0.8),rgba(51,51,51,0.8)),url('../images/stock-photo-fancy-meat-and-cheeseboard-with-fruit-84563321.jpg');
+	background-size: cover;
+	background-position: center;
+	
+	display: flex;
+	flex-flow:column wrap;
+	justify-content:center;
+	align-items:center;
+
+	.wrapper {
+		margin:0;
+		padding:0;
+		text-align: center;
+		color:white;
+
+		p {
+			font-size: 2rem;
+			line-height: 2.6rem;
+		}
+		.italic {
+			font-style: italic;
+		}
+	}
+}
+.wrapper {
+	width:80%;
+	margin:100px auto;
+}
+fieldset{
+	border:none;
+	margin-bottom:50px;
+	border-color: white;
+	padding:25px 0;
+}
+
+label{
+
+}
+
+input {
+	margin:0 50px 25px 0;
+}
+
+input[type=range]{
+	width:100%;
+}
+
+legend{
+	font-family: 'Fauna One', serif;
+	font-size: 3rem;
+	margin:0;
+	padding:0;
+}
+
+.flavor-white {
+	display:none;
+}
+
+.flavor-red {
+	display:none;
+}
+
+.wine {
+	margin: 25px auto;
+	border-radius: 10px;
+
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items:flex-start;
+	.wine-photo {
+		width:40%;
+		margin-right: 15px;
+		img {
+			max-width: 100%;
+			border-radius: 10px;
+		}
+	}
+	.wine-info{
+		width:calc(60% - 15px);
+		padding: 0 25px;
+
+		display:flex;
+		flex-flow:column wrap;
+		justify-content:flex-start;
+		align-items:flex-start;
+	}
+}
+
+.cheeses {
+	display: none;
+	flex-flow:column wrap;
+	justify-content:flex-start;
+	align-items:flex-start;
+
+	.cheese-type {
+		background:$mainColor;
+		border-radius: 10px;
+		width:100%;
+		padding: 50px;
+		margin-bottom: 25px;
+		color:white;
+
+		ul {
+			margin:0;
+			padding:0;
+			display: flex;
+			flex-flow:row wrap;
+			justify-content:space-between;
+			align-items:flex-start;
+		}
+	}
+}
+
+article.cheese-container {
+	width:calc(100% / 3 - 5px); 
+	margin:15px 0;
+	padding:25px;
+
+	display: flex;
+	flex-flow:column wrap;
+	justify-content:flex-start;
+	align-items:flex-start;
+
+	.cheese-image {
+		width:60%;
+		margin-bottom: 15px;
+		img {
+			max-width: 100%;
+			border-radius: 10px;
+		}
+	}
+	.cheese-info {
+		width:100%;
+	}
+}
+
+fieldset#price-selection {
+	display:none;
+}
+
+.submit-container {
+	input[type=submit] {
+		outline: none;
+		border: none;
+		padding:25px;
+		font-size: 2rem;
+		background: $mainColor;
+		color:white;
+		border-radius: 10px;
+		transition:all 0.3s;
+		&:hover{
+			background: papayawhip;
+			color:$mainColor;
+
+		}
+	}
+}
